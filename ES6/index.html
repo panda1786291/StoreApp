@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- v-model:跟Vue对象的num进行绑定
+         -->
+        <input type="text" v-model="num">
+        <button v-on:click="num++">点赞</button>
+        <button v-on:click="cancle">取消</button>
+        <h1>{{name}},handsome,{{num}}为他点赞</h1>
+
+    </div>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script>
+        
+        let vm = new Vue({
+            el: "#app",//id选择器
+            data:{//vm内存放的数据
+                name: "张三",
+                num:1
+            },
+            methods:{//vue对象内定义的
+                cancle(){
+                    this.num--;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

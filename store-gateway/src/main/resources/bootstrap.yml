@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: store-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: 2946e68c-efe8-41bb-8f1f-f7977fa71e13
